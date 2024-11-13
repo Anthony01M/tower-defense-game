@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower Defense Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameArea">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <div id="info">
+        <p>Coins: <span id="coins">100</span></p>
+        <p>Lives: <span id="lives">3</span></p>
+        <p>Wave: <span id="wave">0</span></p>
+    </div>
+    <div id="defenseModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Select Defense Type</p>
+            <button onclick="placeDefense('basic')">Basic Defense (20 coins)</button>
+            <button onclick="placeDefense('fast')">Fast Defense (30 coins)</button>
+            <button onclick="placeDefense('strong')">Strong Defense (50 coins)</button>
+        </div>
+    </div>
+    <div id="towerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTowerModal()">&times;</span>
+            <p id="towerInfo"></p>
+            <button id="upgradeButton" onclick="upgradeDefense()">Upgrade</button>
+            <button onclick="removeDefense()">Remove</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
